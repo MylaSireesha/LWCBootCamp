@@ -1,0 +1,18 @@
+.line1{
+    color:rgb(0, 140, 255);
+    font-weight: bold;
+    
+}
+.line2{
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    
+}
+.line3{
+    color:rgba(27, 224, 9, 0.897);
+    font-weight: bold;
+    
+}
+ul:not(.browser-default) li {
+    list-style-type: disc;
+}
