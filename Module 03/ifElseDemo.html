@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="" icon-name="custom:custom19">
+        <h1 slot="title">Conditional Rendering</h1>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <template if:false={displayTom}>
+                    <img src={JerryImagesrc}  >
+                    <lightning-button variant="brand" label="Show Tom " onclick={handleClick}>
+                    </lightning-button>
+                </template>
+                
+            </div>
+            <div class="slds-col">
+                <template if:true={displayTom}>
+                    <img src={TomImagesrc}  >
+                    <lightning-button variant="brand" label="Show Jerry " onclick={handleClick}>
+                    </lightning-button>
+                </template>
+                
+            </div>
+            
+            
+        </div>
+    </lightning-card>
+</template>
