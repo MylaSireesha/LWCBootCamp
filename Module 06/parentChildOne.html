@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-grid">
+        <lightning-card title="Child One" icon-name="standard:employee_organization" >
+            <table>
+                <tr>
+                    <td>
+                        Child one: {selectbox1}
+                    </td>
+                    <td>
+                        Child Two: {selectbox2}
+                    </td>
+                    <td>
+                        Child Three: {selectbox3}
+                    </td>
+                </tr>
+            </table><br/>
+            
+            <template if:true={refreshflag}>
+                <c-grand-parent-one  onmyclick1={handlechild1} onmyclick2={handlechild2} onmyclick3={handlechild3} ></c-grand-parent-one>
+            </template>   
+            <template if:false={refreshflag}>
+                <c-grand-parent-one  onmyclick1={handlechild1} onmyclick2={handlechild2} onmyclick3={handlechild3} ></c-grand-parent-one>
+            </template>       
+           
+           
+        </lightning-card>
+    </div>
+</template>
