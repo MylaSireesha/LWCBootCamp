@@ -1,0 +1,48 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+        <tbody>
+            <tr class="slds-hint-parent">
+                <td>
+                    <div class="slds-grid">
+                        <lightning-card title="Child One" icon-name="standard:user" class="slds-border_left slds-border_right"> 
+                            <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center ">
+                                <div class="slds-col">
+                                    <span>
+                                        <lightning-button title="Select" variant={buttonColor1} label={buttonLabe1}  onclick={handleClick1}></lightning-button>
+                                    </span> 
+                                    <template if:true={selectBooleanOne}>
+                                         
+                                    </template>
+                                </div>
+                            </div>
+                        </lightning-card>  
+                        <lightning-card title="Child Two" icon-name="standard:user" class="slds-border_right" >
+                            <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center ">
+                                <div class="slds-col">
+                                    <span>
+                                        <lightning-button title="Select" variant={buttonColor2} label={buttonLabe2} onclick={handleClick2}></lightning-button>
+                                    </span>  
+                                    <template if:true={selectBooleanTwo}>
+                                    
+                                    </template>
+                                </div>
+                            </div>
+                        </lightning-card> 
+                        <lightning-card title="Child Three" icon-name="standard:user" class="slds-border_right">
+                            <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-center ">
+                                <div class="slds-col">
+                                    <span>
+                                        <lightning-button title="Select" variant={buttonColor3} label={buttonLabe3} onclick={handleClick3}></lightning-button>
+                                    </span>  
+                                    <template if:true={selectBooleanThree}>
+                                    
+                                    </template>
+                                </div>
+                            </div>
+                        </lightning-card> 
+                    </div> 
+                </td>
+            </tr>
+        </tbody> 
+    </table> 
+</template>
