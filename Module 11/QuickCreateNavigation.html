@@ -1,0 +1,49 @@
+<template>
+    
+    <select class="slds-select" name = "optionSelect" onchange={changeHandler} >
+        <option value="None">None</option>
+        <option value="Account">Account</option>
+        <option value="Contact">Contact</option>
+        <option value="Opportunity">Opportunity</option>
+    </select> 
+    <template if:true={accflag}>
+        <lightning-button label="New Record" onclick={createaccount} variant="brand"></lightning-button>
+        
+        <lightning-record-edit-form onsuccess={handlesuccessacc}  class="slds-m-top_small"
+            object-api-name="Account">
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Industry"></lightning-input-field>               
+                    
+            <lightning-button type="submit" variant="brand" name="Save" label="Save" ></lightning-button>
+        </lightning-record-edit-form>
+    </template>
+    
+    <template if:true={conflag}>
+        <lightning-button label="New Record" onclick={createcontact} variant="brand"></lightning-button>
+
+        <lightning-record-edit-form onsuccess={handlesuccesscontact}  class="slds-m-top_small"
+           object-api-name="Contact">
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="AccountId"></lightning-input-field>
+                                
+            <lightning-button type="submit" variant="brand" name="Save" label="Save" ></lightning-button>
+        </lightning-record-edit-form>
+    </template>
+    
+    <template if:true={optyflag}>
+        <lightning-button label="New Record" onclick={createopportunity} variant="brand"></lightning-button>
+
+        <lightning-record-edit-form onsuccess={handlesuccessopty}  class="slds-m-top_small"
+           object-api-name="Opportunity">
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="CloseDate"></lightning-input-field>
+            <lightning-input-field field-name="StageName"></lightning-input-field>
+                
+            <lightning-button type="submit" variant="brand" name="Save" label="Save" ></lightning-button>
+        </lightning-record-edit-form>
+    </template>
+    
+</template>
