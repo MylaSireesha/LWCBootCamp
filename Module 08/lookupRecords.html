@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Account" icon-name="standard:account">
+            <lightning-record-edit-form object-api-name="Contact">
+            
+                <lightning-input-field label="Select Account" field-name="AccountId" onchange={onValueSelection} disabled={disabled}></lightning-input-field>
+                    
+            </lightning-record-edit-form>
+        
+    </lightning-card>
+    <lightning-button variant="brand" onclick={resetsearch} name="Reset Search" label="Reset Search" class="slds-align_absolute-center"></lightning-button>
+    
+    <!--<template if:true={contactsList}>
+        <template for:each={contactsList} for:item="cons" >
+            <p key={cons.Id}>{cons.Name} </p>
+        </template>
+    </template>-->
+         
+    <template if:true={contactsList}>
+        <lightning-card title="Associated Contacts" icon-name="standard:contact">
+            <table class="slds-table slds-table_cell-buffer slds-table_header-hidden slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="">Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Id">Email</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Email">Phone</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contactsList} for:item="cons" >
+                        <tr key={cons.Id}>
+                            <td>
+                                {cons.Name}
+                            </td>
+                            <td>
+                                 {cons.Email}
+                            </td>
+                            <td>
+                                {cons.Phone}
+                           </td>
+                         </tr>
+                    </template>
+                </tbody>
+            </table>
+    
+        </lightning-card>
+    </template>   
+    
+    
+</template>
