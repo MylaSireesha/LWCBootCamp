@@ -7,7 +7,7 @@
         <option value="Opportunity">Opportunity</option>
     </select> 
     <template if:true={accflag}>
-        <lightning-button label="New Record" onclick={createaccount} variant="brand"></lightning-button>
+        <lightning-button label="New Record" onclick={createaccount} variant="brand" class="slds-align_absolute-center"></lightning-button>
         
         <lightning-record-edit-form onsuccess={handlesuccessacc}  class="slds-m-top_small"
             object-api-name="Account">
@@ -20,7 +20,7 @@
     </template>
     
     <template if:true={conflag}>
-        <lightning-button label="New Record" onclick={createcontact} variant="brand"></lightning-button>
+        <lightning-button label="New Record" onclick={createcontact} variant="brand" class="slds-align_absolute-center"></lightning-button>
 
         <lightning-record-edit-form onsuccess={handlesuccesscontact}  class="slds-m-top_small"
            object-api-name="Contact">
@@ -33,7 +33,7 @@
     </template>
     
     <template if:true={optyflag}>
-        <lightning-button label="New Record" onclick={createopportunity} variant="brand"></lightning-button>
+        <lightning-button label="New Record" onclick={createopportunity} variant="brand" class="slds-align_absolute-center"></lightning-button>
 
         <lightning-record-edit-form onsuccess={handlesuccessopty}  class="slds-m-top_small"
            object-api-name="Opportunity">
